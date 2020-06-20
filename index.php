@@ -36,12 +36,12 @@ function team_member_card_register_block() {
     '01'
   );
 
+  register_block_type( 'team_member_card_block/gutenberg_team_member_card_block', array(
+    'style' => 'gutenberg_team_member_card_block',
+    'editr_script' => 'gutenberg_team_member_card_block'
+  ) );
+
   if ( function_exists( 'wp_set_script_translations' ) ) {
-    /**
-     * May be extended to wp_set_script_translations( 'my-handle', 'my-domain',
-     * plugin_dir_path( MY_PLUGIN ) . 'languages' ) ). For details see
-     * https://make.wordpress.org/core/2018/11/09/new-javascript-i18n-support-in-wordpress/
-     */
     wp_set_script_translations( 'gutenberg_team_member_card_block', 'team_member_card_block' );
   }
 }
