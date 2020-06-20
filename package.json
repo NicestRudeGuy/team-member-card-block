@@ -4,11 +4,12 @@
   "description": "Team Member Block for Gutenberg",
   "main": "build/index.js",
   "scripts": {
-    "start": "wp-scripts start",
-    "build": "wp-scripts build",
-    "format:js": "wp-scripts format-js",
-    "lint:js": "wp-scripts lint-js"
-  },
+		"build": "wp-scripts build",
+		"format:js": "wp-scripts format-js",
+		"lint:js": "wp-scripts lint-js",
+		"packages-update": "wp-scripts packages-update",
+		"start": "wp-scripts start"
+	},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/moitorrijos/team-member-card-block.git"
@@ -22,5 +23,8 @@
   "homepage": "https://github.com/moitorrijos/team-member-card-block#readme",
   "devDependencies": {
     "@wordpress/scripts": "^11.0.0"
+  },
+  "dependencies": {
+    "@wordpress/element": "^2.14.0"
   }
 }

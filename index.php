@@ -20,12 +20,10 @@ function team_member_card_block_load_textdomain() {
 
 function team_member_card_register_block() {
 
-  $dependencies = array('dependencies' => array('wp-block-editor', 'wp-blocks', 'wp-components', 'wp-element', 'wp-i18n', 'wp-polyfill'));
-
   wp_register_script(
     'gutenberg_team_member_card_block',
     plugins_url('build/index.js', __FILE__),
-    $dependencies,
+    array('wp-block-editor', 'wp-blocks', 'wp-components', 'wp-element', 'wp-i18n', 'wp-polyfill'),
     '01'
   );
 
@@ -36,7 +34,7 @@ function team_member_card_register_block() {
     '01'
   );
 
-  register_block_type( 'team_member_card_block/gutenberg_team_member_card_block', array(
+  register_block_type( 'team-member-card/team_member_card_block_gutenberg', array(
     'style' => 'gutenberg_team_member_card_block',
     'editr_script' => 'gutenberg_team_member_card_block'
   ) );
